@@ -38,5 +38,30 @@ public class ProdService {
  
         entityManager.persist(p1);
     }
+    @Transactional
+    public void inserisciVetrata(String nome, String vetro, String descrizione, double prezzo, String url) {
+    	Prod_vetrata vetrata = new Prod_vetrata();
+    	vetrata.setNome(nome);
+    	vetrata.setVetro(vetro);
+    	vetrata.setDescrizione(descrizione);
+    	vetrata.setPrezzo(prezzo);
+    	vetrata.setUrl(url);
+ 
+        entityManager.persist(vetrata);
+    
+    
+}
+    @Transactional
+    public void inserisciInfisso(String nome, String materiale, double prezzo, String descrizione, String url) {
+        // Crea un nuovo oggetto Dip con i parametri forniti
+        Prod_infisso infisso = new Prod_infisso();
+        infisso.setNome(nome);
+        infisso.setMateriale(materiale);
+        infisso.setPrezzo(prezzo);
+        infisso.setDescrizione(descrizione);
+        infisso.setUrl(url);
+        
+        entityManager.persist(infisso);
+    }
  
 }

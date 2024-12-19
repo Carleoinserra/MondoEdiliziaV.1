@@ -63,10 +63,34 @@ public class MyController {
 		
 		p1.inserisciParapetto(nome, descrizione, spessore, prezzo, url);
 		
-		return "parquet aggiunto";
+		return "parapetto aggiunto";
 		
 	}
 	
-
+	@ResponseBody
+	@PostMapping("/addIn")
+	public String addInfisso(
+			@RequestParam("nome") String nome, 
+			@RequestParam("materiale") String materiale,
+			@RequestParam("prezzo") double prezzo,
+			@RequestParam("descrizione") String descrizione,
+			@RequestParam("url") String url
+			) {
+		p1.inserisciInfisso(nome, materiale, prezzo, descrizione, url);
+		return nome + " aggiunto con successo";
+	}
+	
+	@ResponseBody
+	@PostMapping("/addV")
+	public String addVetrata(
+			@RequestParam("nome") String nome, 
+			@RequestParam("vetro") String vetro,
+			@RequestParam("descrizione") String descrizione,
+			@RequestParam("prezzo") double prezzo,
+			@RequestParam("url") String url
+			) {
+		p1.inserisciVetrata(nome, vetro, descrizione, prezzo, url);
+		return nome + " aggiunta con successo";
+	}
 }
 
