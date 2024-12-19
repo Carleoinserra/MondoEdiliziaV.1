@@ -16,6 +16,7 @@ public class Prod_parquet {
 	String collezione;
 	String descrizione;
 	double prezzo;
+	String url;
 	public String getNome() {
 		return nome;
 	}
@@ -31,9 +32,7 @@ public class Prod_parquet {
 	public String getCollezione() {
 		return collezione;
 	}
-	public void setCollezzione(String collezzione) {
-		this.collezione = collezzione;
-	}
+	
 	public String getDescrizione() {
 		return descrizione;
 	}
@@ -46,6 +45,16 @@ public class Prod_parquet {
 	public void setPrezzo(double prezzo) {
 		this.prezzo = prezzo;
 	}
+	public String getUrl() {
+		return url;
+	}
+	public void setUrl(String url) {
+		this.url = url;
+	}
+	public void setCollezione(String collezione) {
+		this.collezione = collezione;
+	}
+	
 	
 
 }
